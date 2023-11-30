@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Payment extends StatefulWidget {
-  const Payment( {
-    super.key
-  });
+class Payment extends StatelessWidget {
+  final String payment, price;
 
-  @override
-  State<Payment> createState() => _Payment();
-}
+  const Payment({super.key, required this.payment, required this.price});
 
-class _Payment extends State<Payment> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -36,33 +31,33 @@ class _Payment extends State<Payment> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        width: double.infinity,
+                       SizedBox(
+                        //width: double.infinity,
                         height: 18,
                         child: Text(
-                          'Платёж 9 июля',
-                          style: TextStyle(
+                          payment,
+                          style: const TextStyle(
                             color: Colors.black,
                             fontSize: 14,
                             fontFamily: 'SF Pro Text',
                             fontWeight: FontWeight.w500,
-                            height: 0.09,
+                            //height: 0.09,
                             letterSpacing: -0.41,
                           ),
                         ),
                       ),
                       const SizedBox(width: 184, height: 2),
                       SizedBox(
-                        width: double.infinity,
+                        //width: double.infinity,
                         height: 18,
                         child: Text(
-                          '199 ₽ в месяц',
+                          price,
                           style: TextStyle(
                             color: Colors.black.withOpacity(0.550000011920929),
                             fontSize: 14,
                             fontFamily: 'SF Pro Text',
                             fontWeight: FontWeight.w500,
-                            height: 0.09,
+                            //height: 0.09,
                             letterSpacing: -0.41,
                           ),
                         ),

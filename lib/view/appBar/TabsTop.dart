@@ -40,7 +40,7 @@ class TabsTop extends StatelessWidget {
                     children: [
                       const SizedBox(width: 187.50, height: 17),
                       Container(
-                        width: double.infinity,
+                        //width: double.infinity,
                         height: 20,
                         clipBehavior: Clip.antiAlias,
                         decoration: const BoxDecoration(),
@@ -50,7 +50,7 @@ class TabsTop extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              width: double.infinity,
+                              //width: double.infinity,
                               height: 20,
                               child: Text(
                                 'Профиль',
@@ -60,7 +60,7 @@ class TabsTop extends StatelessWidget {
                                   fontSize: 16,
                                   fontFamily: 'SF Pro Text',
                                   fontWeight: FontWeight.w500,
-                                  height: 0.08,
+                                  //height: 0.08,
                                   letterSpacing: -0.40,
                                 ),
                               ),
@@ -86,7 +86,7 @@ class TabsTop extends StatelessWidget {
                     children: [
                       const SizedBox(width: 187.50, height: 17),
                       Container(
-                        width: double.infinity,
+                        //width: double.infinity,
                         height: 20,
                         clipBehavior: Clip.antiAlias,
                         decoration: const BoxDecoration(),
@@ -96,7 +96,7 @@ class TabsTop extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              width: double.infinity,
+                              //width: double.infinity,
                               height: 20,
                               child: Text(
                                 'Настройки',
@@ -106,7 +106,7 @@ class TabsTop extends StatelessWidget {
                                   fontSize: 16,
                                   fontFamily: 'SF Pro Text',
                                   fontWeight: FontWeight.w500,
-                                  height: 0.08,
+                                  //height: 0.08,
                                   letterSpacing: -0.40,
                                 ),
                               ),

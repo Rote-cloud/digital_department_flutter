@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project/view/card/Payment.dart';
 import 'package:flutter_project/view/card/SubscriptionName.dart';
 
-class Subscriptions extends StatefulWidget {
+class Subscriptions extends StatelessWidget {
+  final String image;
+  final String title;
+  final String payment;
+  final String price;
   const Subscriptions( {
-    super.key
+    super.key, required this.image, required this.title, required this.payment, required this.price
   });
 
-  @override
-  State<Subscriptions> createState() => _TextConnection();
-}
-
-class _TextConnection extends State<Subscriptions> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,6 +19,8 @@ class _TextConnection extends State<Subscriptions> {
       clipBehavior: Clip.antiAlias,
       //color: Colors.black,
       //padding: const EdgeInsets.fromLTRB(16, 8, 8, 32),
+      //padding: const EdgeInsets.only(right: 8.0),
+      margin: EdgeInsets.only(right:8),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -40,13 +41,14 @@ class _TextConnection extends State<Subscriptions> {
           )
         ],
       ),
-      child: const Column(
+      child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-              SubscriptionName(),
-              //Payment()
+              SubscriptionName(image: image, title: title),
+              const SizedBox(height: 24,),
+              Payment(payment: payment, price: price,)
         ],
       ),
     );

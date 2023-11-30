@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SubscriptionName extends StatefulWidget {
+class SubscriptionName extends StatelessWidget {
+  final String image, title;
   const SubscriptionName( {
-    super.key
+    super.key, required this.image, required this.title
   });
 
-  @override
-  State<SubscriptionName> createState() => _SubscriptionName();
-}
-
-class _SubscriptionName extends State<SubscriptionName> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -56,39 +52,17 @@ class _SubscriptionName extends State<SubscriptionName> {
                                     child: Container(
                                       width: 36,
                                       height: 36,
-                                      decoration: const ShapeDecoration(
-                                        color: Color(0x148C8C8C),
-                                        shape: OvalBorder(),
+                                      decoration: ShapeDecoration(
+                                        color: const Color(0x148C8C8C),
+                                        shape: const OvalBorder(),
                                         image: DecorationImage(
-                                          image: AssetImage("assets/flutter_png/sber.png"),
+                                          image: AssetImage(image),
                                           //fit: BoxFit.fill,
                                         ),
                                       ),
                                     ),
                                   ),
-                                  const Positioned(
-                                    left: 8,
-                                    top: 8.07,
-                                    child: SizedBox(
-                                      width: 20.62,
-                                      height: 19.89,
-                                      child: Stack(
-                                        children: [
-                                          Positioned(
-                                            left: 1.50,
-                                            top: 2.93,
-                                            child: SizedBox(
-                                              width: 7,
-                                              height: 7,
-                                              child: Stack(children: [
 
-                                                  ]),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
                                 ],
                               ),
                             ),
@@ -104,7 +78,7 @@ class _SubscriptionName extends State<SubscriptionName> {
                   width: 136,
                   clipBehavior: Clip.antiAlias,
                   decoration: const BoxDecoration(),
-                  child: const Column(
+                  child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,8 +86,8 @@ class _SubscriptionName extends State<SubscriptionName> {
                       SizedBox(
                         width: double.infinity,
                         child: Text(
-                          'СберПрайм',
-                          style: TextStyle(
+                          title,
+                          style: const TextStyle(
                             color: Colors.black,
                             fontSize: 16,
                             fontFamily: 'SF Pro Text',

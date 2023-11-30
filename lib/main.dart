@@ -41,14 +41,25 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Column(children: [
-        BarTop(),
-        TextConnection(),
+        const BarTop(),
+        const TextConnection(),
         //Background()
-        //TextConnection(),
-        Subscriptions(),
-        //Payment()
+        SizedBox(
+          height: 130,
+          width: 375,// Important to set a high
+          child: ListView(
+            padding: const EdgeInsets.only(left: 16.0),
+            scrollDirection: Axis.horizontal, // Set the scroll direction
+            shrinkWrap: true,
+            children: const [
+              Subscriptions(image: "images/sberPrime.png", title: "СберПрайм", payment: 'Платёж 9 июля', price: '199 ₽ в месяц'),
+              Subscriptions(image: "images/percent.png", title: "Переводы", payment: "Автопродление 21 августа", price: "199 ₽ в месяц")
+              // You can add as many as you want ...
+            ],
+          ),
+        ),
       ])
     );
   }

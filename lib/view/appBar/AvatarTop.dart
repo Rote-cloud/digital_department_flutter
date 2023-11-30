@@ -11,7 +11,7 @@ class AvatarTop extends StatelessWidget {
       //padding: const EdgeInsets.only(bottom: 36.0),
       decoration: ShapeDecoration(
         image: const DecorationImage(
-          image: AssetImage("assets/flutter_png/Photo.png"),
+          image: AssetImage("images/photo.png"),
           fit: BoxFit.fill,
         ),
         shape: RoundedRectangleBorder(
