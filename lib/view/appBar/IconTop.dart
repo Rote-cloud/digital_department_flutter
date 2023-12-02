@@ -8,7 +8,7 @@ class IconTop extends StatelessWidget {
     Color iconColor = const Color.fromRGBO(8, 166, 82, 1.0);
 
     return Container(
-      width: 375,
+      //width: 375,
       height: 88,
       padding: const EdgeInsets.only(top: 44.0),
       child: Row(

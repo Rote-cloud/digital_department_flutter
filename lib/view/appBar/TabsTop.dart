@@ -8,17 +8,17 @@ class TabsTop extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 375,
+          //width: 375,
           height: 56,
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(color: Colors.white),
           child: Stack(
             children: [
               const Positioned(
-                left: 0,
+                //left: 0,
                 top: 56,
                 child: SizedBox(
-                  width: 375,
+                  //width: 375,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -27,7 +27,7 @@ class TabsTop extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 0,
+                //left: 0,
                 top: 0,
                 child: Container(
                   height: 56,
@@ -38,7 +38,7 @@ class TabsTop extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(width: 187.50, height: 17),
+                      const SizedBox(height: 17),
                       Container(
                         //width: double.infinity,
                         height: 20,
@@ -68,13 +68,13 @@ class TabsTop extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(width: 187.50, height: 19),
+                      const SizedBox(height: 19),
                     ],
                   ),
                 ),
               ),
               Positioned(
-                left: 187.50,
+                //left: 187.50,
                 top: 0,
                 child: Container(
                   clipBehavior: Clip.antiAlias,
@@ -84,7 +84,7 @@ class TabsTop extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(width: 187.50, height: 17),
+                      const SizedBox(height: 17),
                       Container(
                         //width: double.infinity,
                         height: 20,
@@ -114,7 +114,7 @@ class TabsTop extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(width: 187.50, height: 19),
+                      const SizedBox(height: 19),
                     ],
                   ),
                 ),

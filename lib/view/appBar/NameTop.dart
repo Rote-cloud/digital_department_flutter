@@ -13,7 +13,7 @@ class NameTop extends StatelessWidget {
         fontSize: 24,
         fontFamily: 'SF Pro Display',
         fontWeight: FontWeight.w700,
-        height: 0.06,
+        //height: 0.06,
       ),
     );
   }

@@ -16,13 +16,10 @@ class BarTop extends StatelessWidget {
     return const Column(
       children: [
         SizedBox(
-          width: 375,
-          height: 306,
+          //height: 250,
           child: Stack(
             children: [
               Positioned(
-                left: 0,
-                top: 0,
                 child: Background(),
               ),
               Positioned(
@@ -32,20 +29,17 @@ class BarTop extends StatelessWidget {
                 child: IconTop(),
               ),
               Positioned(
-                left: 126,
-                top: 204,
-                child: NameTop(),
-              ),
-              Positioned(
-                left: 135,
+                left: 0,
+                right: 0,
                 top: 58,
                 child: AvatarTop(),
               ),
               Positioned(
                 left: 0,
-                top: 250,
-                child: TabsTop(),
-              )
+                right: 0,
+                top: 204,
+                child: NameTop(),
+              ),
             ],
           ),
         ),
