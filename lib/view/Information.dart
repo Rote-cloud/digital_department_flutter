@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Font.dart';
+import 'package:flutter_project/assets/Size.dart';
 
 class Information extends StatelessWidget {
   final String image;
@@ -15,15 +18,15 @@ class Information extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.only(bottom: 12.0),
+              padding: const EdgeInsets.only(bottom: MySize.paddingBottomTariffs),
               clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(color: Colors.white.withOpacity(0)),
+              decoration: BoxDecoration(),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 12),
+                  const SizedBox(height: MySize.paddingBottomTariffs),
                   Container(
                     clipBehavior: Clip.antiAlias,
                     decoration: const BoxDecoration(),
@@ -40,7 +43,6 @@ class Information extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              //const SizedBox(width: 30, height: 40),
                               Container(
                                 clipBehavior: Clip.antiAlias,
                                 decoration: const BoxDecoration(),
@@ -49,16 +51,17 @@ class Information extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    const SizedBox(width: 26, height: 2),
+                                    const SizedBox(width: MySize.widthSpaceTextTariffs,
+                                        height: MySize.heightSpaceTextCard),
                                     SizedBox(
-                                      width: 36,
-                                      height: 36,
+                                      width: MySize.sizeImageCard,
+                                      height: MySize.sizeImageCard,
                                       child: Stack(
                                         children: [
                                           Positioned(
                                             child: Container(
-                                              width: 36,
-                                              height: 36,
+                                              width: MySize.sizeImageCard,
+                                              height: MySize.sizeImageCard,
                                               decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                   image: AssetImage(image),
@@ -70,13 +73,12 @@ class Information extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    //const SizedBox(width: 20, height: 2),
                                   ],
                                 ),
                               ),
-                              const SizedBox(width: 12, height: 40),
+                              const SizedBox(width: MySize.paddingBottomTariffs),
                               SizedBox(
-                                width: 263,
+                                width: MySize.widthTextTariffs,
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -86,13 +88,7 @@ class Information extends StatelessWidget {
                                       width: double.infinity,
                                       child: Text(
                                         title,
-                                        style: const TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 16,
-                                          fontFamily: 'SF Pro Text',
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: -0.40,
-                                        ),
+                                        style: MyFont.textStyleTitle,
                                       ),
                                     ),
                                   ],
@@ -109,23 +105,22 @@ class Information extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SizedBox(width: 30, height: 40),
+                              SizedBox(width: MySize.widthSpaceArrow),
                               SizedBox(
-                                width: 24,
-                                height: 24,
+                                width: MySize.sizeArrow,
+                                height: MySize.sizeArrow,
                                 child: Stack(children: [
                                   Positioned(
-                                    top: 10,
+                                    top: MySize.paddingTopArrow,
                                     child:
                                     Icon(
                                       Icons.arrow_forward_ios,
-                                      size: 16,
-                                      color: Color.fromRGBO(0, 0, 0, 0.32),
+                                      size: MySize.sizeIconArrow,
+                                      color: MyColor.colorIconArrow,
                                     ),
                                   )
-
                                 ]),
-                              ), //SizedBox(width: 8, height: 40),
+                              ),
                             ],
                           ),
                         ),
@@ -135,7 +130,6 @@ class Information extends StatelessWidget {
                 ],
               ),
             ),
-            //const SizedBox(height: 46)
           ],
         )
     );

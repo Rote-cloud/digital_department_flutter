@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Font.dart';
+import 'package:flutter_project/assets/Size.dart';
 
 class Payment extends StatelessWidget {
   final String payment, price;
@@ -8,8 +11,7 @@ class Payment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 38,
+      height: MySize.heightPayment,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -22,7 +24,7 @@ class Payment extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(width: 16, height: 34),
+                const SizedBox(width: MySize.paddingCard),
                 Container(
                   clipBehavior: Clip.antiAlias,
                   decoration: const BoxDecoration(),
@@ -32,34 +34,18 @@ class Payment extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                        SizedBox(
-                        //width: double.infinity,
-                        height: 18,
+                        height: MySize.heightTextPayment,
                         child: Text(
                           payment,
-                          style: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontFamily: 'SF Pro Text',
-                            fontWeight: FontWeight.w500,
-                            //height: 0.09,
-                            letterSpacing: -0.41,
-                          ),
+                          style: MyFont.textStylePaymentCard,
                         ),
                       ),
-                      const SizedBox(width: 184, height: 2),
+                      const SizedBox(height: MySize.heightSpaceTextCard),
                       SizedBox(
-                        //width: double.infinity,
-                        height: 18,
+                        height: MySize.heightTextPayment,
                         child: Text(
                           price,
-                          style: TextStyle(
-                            color: Colors.black.withOpacity(0.550000011920929),
-                            fontSize: 14,
-                            fontFamily: 'SF Pro Text',
-                            fontWeight: FontWeight.w500,
-                            //height: 0.09,
-                            letterSpacing: -0.41,
-                          ),
+                          style: MyFont.textStylePriceCard,
                         ),
                       ),
                     ],
@@ -69,16 +55,7 @@ class Payment extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            width: 16,
-            height: 38,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(width: 16, height: 38),
-              ],
-            ),
+            width: MySize.paddingCard,
           ),
         ],
       ),

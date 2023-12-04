@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Font.dart';
+import 'package:flutter_project/assets/Strings.dart';
 
 class NameTop extends StatelessWidget {
   const NameTop({super.key});
@@ -6,15 +9,9 @@ class NameTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-      'Екатерина',
+      MyStrings.textNameTop,
       textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 24,
-        fontFamily: 'SF Pro Display',
-        fontWeight: FontWeight.w700,
-        //height: 0.06,
-      ),
+      style: MyFont.textStyleNameTop,
     );
   }
 }

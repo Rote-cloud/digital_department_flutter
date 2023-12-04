@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Font.dart';
+import 'package:flutter_project/assets/Size.dart';
 import 'package:flutter_project/view/card/Payment.dart';
 import 'package:flutter_project/view/card/SubscriptionName.dart';
 
@@ -14,31 +17,18 @@ class Subscriptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 216,
-      height: 130,
+      width: MySize.widthCard,
+      height: MySize.heightCard,
       clipBehavior: Clip.antiAlias,
-      //color: Colors.black,
-      //padding: const EdgeInsets.fromLTRB(16, 8, 8, 32),
-      //padding: const EdgeInsets.only(right: 8.0),
-      margin: EdgeInsets.only(right:8),
+      margin: const EdgeInsets.only(right: MySize.paddingLR),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(MySize.borderRadiusCard),
         ),
         shadows: const [
-          BoxShadow(
-            color: Color(0x114F4F6C),
-            blurRadius: 14,
-            offset: Offset(0, 8),
-            spreadRadius: 0,
-          ),
-          BoxShadow(
-            color: Color(0x14000000),
-            blurRadius: 10,
-            offset: Offset(0, 2),
-            spreadRadius: 0,
-          )
+          MyFont.boxShadowCard1,
+          MyFont.boxShadowCard2
         ],
       ),
       child: Column(
@@ -47,7 +37,7 @@ class Subscriptions extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
               SubscriptionName(image: image, title: title),
-              const SizedBox(height: 24,),
+              const SizedBox(height: MySize.heightSpaceCard),
               Payment(payment: payment, price: price,)
         ],
       ),

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Size.dart';
 
 class IconTop extends StatelessWidget {
   const IconTop({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Color iconColor = const Color.fromRGBO(8, 166, 82, 1.0);
+    Color iconColor = MyColor.colorIcon;
 
     return Container(
-      //width: 375,
-      height: 88,
-      padding: const EdgeInsets.only(top: 44.0),
+      height: MySize.heightIconTop,
+      padding: const EdgeInsets.only(top: MySize.paddingIconTop),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

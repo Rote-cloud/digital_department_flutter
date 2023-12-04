@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Size.dart';
+import 'package:flutter_project/assets/Strings.dart';
 import 'package:flutter_project/view/Chips.dart';
 import 'package:flutter_project/view/Information.dart';
 import 'package:flutter_project/view/TariffsAndLimits.dart';
@@ -35,20 +38,26 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       initialIndex: 0,
-      length: 2,
+      length: MySize.lenBar,
       child: Scaffold(
-          //backgroundColor: Colors.white,
+          backgroundColor: MyColor.colorBackground,
           appBar: AppBar(
-            toolbarHeight: 230,
-            backgroundColor: Colors.white,
-            shadowColor: Color(0x14000014),
-            title: BarTop(),
+            toolbarHeight: MySize.toolbarHeight,
+            backgroundColor: MyColor.colorBackground,
+            shadowColor: MyColor.colorShadowAppBar,
+            title: const BarTop(),
             bottom: const TabBar(
-              labelColor: Color.fromRGBO(8, 166, 82, 1.0),
-              indicatorColor: Color.fromRGBO(8, 166, 82, 1.0),
+              labelColor: MyColor.colorTabBar,
+              indicatorColor: MyColor.colorTabBar,
               tabs: [
-                Tab(text: "Профиль"),
-                Tab(text: "Настройки",)
+                SizedBox(
+                  width: MySize.widthBottomTabBar,
+                  child: Tab(text: MyStrings.textProfile)
+                  ),
+                SizedBox(
+                  width: MySize.widthBottomTabBar,
+                  child: Tab(text: MyStrings.textSetting,),
+                )
               ],
             ),
           ),
@@ -56,45 +65,47 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               SingleChildScrollView(
                 child: Column(children: [
-                  const TextConnection(title: 'У вас подключено',
-                    text: 'Подписки, автоплатежи и сервисы на которые вы подписались',),
+                  const TextConnection(title: MyStrings.title1,
+                    text: MyStrings.text1,),
                   SizedBox(
-                    height: 130,
-                    //width: 375,// Important to set a high
+                    height: MySize.heightMainCard,
                     child: ListView(
-                      padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                      padding: const EdgeInsets.only(left: MySize.paddingLR, right: MySize.paddingLR,
+                      bottom: MySize.paddingTB, top: MySize.paddingTB),
                       scrollDirection: Axis.horizontal, // Set the scroll direction
                       shrinkWrap: true,
                       children: const [
-                        Subscriptions(image: "images/sberPrime.png", title: "СберПрайм", payment: 'Платёж 9 июля', price: '199 ₽ в месяц'),
-                        Subscriptions(image: "images/percent.png", title: "Переводы", payment: "Автопродление 21 августа", price: "199 ₽ в месяц")
+                        Subscriptions(image: MyStrings.textCardImage1, title: MyStrings.textCardTitle1,
+                            payment: MyStrings.textCardPayment1, price: MyStrings.textCardPrice1),
+                        Subscriptions(image: MyStrings.textCardImage2, title: MyStrings.textCardTitle2,
+                            payment: MyStrings.textCardPayment2, price: MyStrings.textCardPrice2)
                       ],
                     ),
                   ),
-                  const SizedBox(height: 26),
-                  const TextConnection(title: "Тарифы и лимиты", text: "Для операций в Сбербанк Онлайн"),
-                  const TariffsAndLimits(image: "images/limit.png",
-                      title: "Изменить суточный лимит", text: "На платежи и переводы"),
+                  const SizedBox(height: MySize.spaceCardAndTariffs),
+                  const TextConnection(title: MyStrings.title2, text: MyStrings.text2),
+                  const TariffsAndLimits(image: MyStrings.textTariffsImage1,
+                      title: MyStrings.textTariffsTitle1, text: MyStrings.textTariffsText1),
                   const Divider(
-                    color: Color.fromRGBO(0, 0, 0, 0.12),
-                    height: 1,
-                    indent: 70,
+                    color: MyColor.colorLine,
+                    height: MySize.heightLine,
+                    indent: MySize.indentLine,
                   ),
-                  const TariffsAndLimits(image: "images/empty_percent.png",
-                      title: "Переводы без комиссии", text: "Показать остаток в этом месяце"),
+                  const TariffsAndLimits(image: MyStrings.textTariffsImage2,
+                      title: MyStrings.textTariffsTitle2, text: MyStrings.textTariffsText2),
                   const Divider(
-                    color: Color.fromRGBO(0, 0, 0, 0.12),
-                    height: 1,
-                    indent: 70,
+                    color: MyColor.colorLine,
+                    height: MySize.heightLine,
+                    indent: MySize.indentLine,
                   ),
-                  const Information(image: "images/arrows.png",
-                      title: "Информация о тарифах и лимитах"),
-                  const TextConnection(title: "Интересы",
-                      text: "Мы подбираем истории и предложения по темам, которые вам нравятся"),
+                  const Information(image: MyStrings.textInfoImage,
+                      title: MyStrings.textInfoTitle),
+                  const TextConnection(title: MyStrings.title3,
+                      text: MyStrings.text3),
                   const Chips()
                 ]),
               ),
-              Center(
+              const Center(
                 child: Text("TEXT"),
               )
             ],

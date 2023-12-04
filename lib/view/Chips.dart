@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Font.dart';
+import 'package:flutter_project/assets/Size.dart';
 
 class Chips extends StatefulWidget {
   const Chips({Key? key}) : super(key: key);
@@ -29,15 +32,13 @@ class _Chips extends State<Chips> {
 
   @override
   Widget build(BuildContext context) {
-    var _isSelected = false;
-    Set<String> filters = <String>{};
     return Container(
-      padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 32.0),
+      padding: const EdgeInsets.only(left: MySize.paddingLR,
+          right: MySize.paddingLR, bottom: MySize.paddingBottomChips),
       child: Wrap(
-          spacing: 8.0,
-          runSpacing: 8.0,
+          spacing: MySize.spacingChips,
+          runSpacing: MySize.spacingChips,
           children: techChips()
-
       ),
     );
   }
@@ -45,12 +46,13 @@ class _Chips extends State<Chips> {
     List<Widget> chips = [];
     for (int i = 0; i < _chipsList.length; i++) {
       Widget item = FilterChip(
-        label: Text(_chipsList[i].label),
-        selectedColor: const Color.fromRGBO(8, 166, 82, 1.0),
-        backgroundColor: const Color.fromRGBO(0, 0, 0, 0.08),
+        label: Text(_chipsList[i].label,
+          style: MyFont.textStyleChips),
+        selectedColor: MyColor.colorChipsSelected,
+        backgroundColor: MyColor.colorChipsBack,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: Color.fromRGBO(0, 0, 0, 0.08)),
+          borderRadius: BorderRadius.circular(MySize.borderRadiusChips),
+          side: const BorderSide(color: MyColor.colorChipsBack),
         ),
         selected: _chipsList[i].isSelected,
         onSelected: (bool value) {

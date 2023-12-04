@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Font.dart';
+import 'package:flutter_project/assets/Size.dart';
+import 'package:flutter_project/assets/Strings.dart';
 
 class AvatarTop extends StatelessWidget {
   const AvatarTop({super.key});
@@ -8,24 +12,18 @@ class AvatarTop extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 110,
-          height: 110,
-          //padding: const EdgeInsets.only(bottom: 36.0),
+          width: MySize.sizeAvatar,
+          height: MySize.sizeAvatar,
           decoration: ShapeDecoration(
             image: const DecorationImage(
-              image: AssetImage("images/photo.png"),
+              image: AssetImage(MyStrings.imageAvatar),
               fit: BoxFit.fill,
             ),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(38),
+              borderRadius: BorderRadius.circular(MySize.borderRadiusAvatar),
             ),
             shadows: const [
-              BoxShadow(
-                color: Color(0x7A1D1D25),
-                blurRadius: 24,
-                offset: Offset(0, 16),
-                spreadRadius: -16,
-              )
+              MyFont.boxShadowAvatar
             ],
           ),
         )

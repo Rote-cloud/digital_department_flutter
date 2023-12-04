@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Font.dart';
+import 'package:flutter_project/assets/Size.dart';
 
 class SubscriptionName extends StatelessWidget {
   final String image, title;
@@ -9,21 +12,20 @@ class SubscriptionName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 40,
+      height: MySize.heightSubscriptionName,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: double.infinity,
+            //height: double.infinity,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(width: 16, height: 36),
+                const SizedBox(width: MySize.paddingCard),
                 Container(
                   clipBehavior: Clip.antiAlias,
                   decoration: const BoxDecoration(),
@@ -32,50 +34,48 @@ class SubscriptionName extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(width: 36, height: 2),
+                      const SizedBox(height: MySize.heightSpaceTextCard),
                       SizedBox(
-                        width: 36,
-                        height: 36,
+                        width: MySize.sizeImageCard,
+                        height: MySize.sizeImageCard,
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SizedBox(
-                              width: 36,
-                              height: 36,
+                              width: MySize.sizeImageCard,
+                              height: MySize.sizeImageCard,
                               child: Stack(
                                 children: [
                                   Positioned(
                                     left: 0,
                                     top: 0,
                                     child: Container(
-                                      width: 36,
-                                      height: 36,
+                                      width: MySize.sizeImageCard,
+                                      height: MySize.sizeImageCard,
                                       decoration: ShapeDecoration(
-                                        color: const Color(0x148C8C8C),
+                                        color: MyColor.colorCardIconBack,
                                         shape: const OvalBorder(),
                                         image: DecorationImage(
                                           image: AssetImage(image),
-                                          //fit: BoxFit.fill,
                                         ),
                                       ),
                                     ),
                                   ),
-
                                 ],
                               ),
                             ),
                           ],
                         ),
                       ),
-                      const SizedBox(width: 36, height: 2),
+                      const SizedBox(height: MySize.heightSpaceTextCard),
                     ],
                   ),
                 ),
-                const SizedBox(width: 12, height: 36),
+                const SizedBox(width: MySize.widthSpaceCard),
                 Container(
-                  width: 136,
+                  width: MySize.widthTextCard,
                   clipBehavior: Clip.antiAlias,
                   decoration: const BoxDecoration(),
                   child: Column(
@@ -84,17 +84,9 @@ class SubscriptionName extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                        width: double.infinity,
                         child: Text(
                           title,
-                          style: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontFamily: 'SF Pro Text',
-                            fontWeight: FontWeight.w500,
-                            //height: 0.08,
-                            letterSpacing: -0.40,
-                          ),
+                          style: MyFont.textStyleSubscriptionName,
                         ),
                       ),
                     ],
@@ -103,17 +95,8 @@ class SubscriptionName extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            width: 16,
-            height: 40,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(width: 16, height: 40),
-              ],
-            ),
+          const SizedBox(
+            width: MySize.paddingCard,
           ),
         ],
       ),

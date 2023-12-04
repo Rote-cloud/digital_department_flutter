@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+import 'package:flutter_project/assets/Font.dart';
+import 'package:flutter_project/assets/Size.dart';
 
 class TextConnection extends StatelessWidget {
   final String title;
@@ -18,7 +21,7 @@ class TextConnection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 14),
+              const SizedBox(height: MySize.paddinTopTextConnection),
               Container(
                 clipBehavior: Clip.antiAlias,
                 decoration: const BoxDecoration(),
@@ -27,9 +30,8 @@ class TextConnection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    //const SizedBox(width: 16, height: 50),
                     Container(
-                      padding: const EdgeInsets.only(right: 16.0),
+                      padding: const EdgeInsets.only(right: MySize.paddingLR),
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(),
                       child: Column(
@@ -38,30 +40,17 @@ class TextConnection extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            //width: 343,
                             child: Text(
                               title,
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontFamily: 'SF Pro Text',
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: -0.70,
-                              ),
+                              style: MyFont.textStyleTitleConnection,
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: MySize.spaceTextConnection),
                           SizedBox(
-                            width: 343,
+                            width: MySize.widthTextConnection,
                             child: Text(
                               text,
-                              style: TextStyle(
-                                color: Colors.black.withOpacity(0.550000011920929),
-                                fontSize: 14,
-                                fontFamily: 'SF Pro Text',
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: -0.42,
-                              ),
+                              style: MyFont.textStyleTextConnection,
                             ),
                           ),
                         ],
@@ -70,7 +59,6 @@ class TextConnection extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 12),
             ],
           ),
         ),

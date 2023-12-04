@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/assets/Color.dart';
+
+import '../../assets/Size.dart';
 
 class Background extends StatelessWidget {
   const Background({super.key});
@@ -6,11 +9,9 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        //width:  375,
-        height: 250,
+        height: MySize.heightBack,
         decoration: const BoxDecoration(
-          color: Colors.white,
-
+          color: MyColor.colorBackground,
         ),
       );
   }
