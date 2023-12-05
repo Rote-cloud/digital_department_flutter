@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MySize {
-  static const double toolbarHeight = 230;
+  static const double toolbarHeight = 226;
   static const int lenBar = 2;
   static const double heightMainCard = 170;
   static const double paddingLR = 16.0;
