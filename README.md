@@ -1,8 +1,8 @@
 # flutter_project
 
-![Flutter Photo](photo/photo1.png)
+![Flutter Photo](images/photo1.png)
 
-![Flutter Photo](photo/photo2.png)
+![Flutter Photo](images/photo2.png)
 
 ## Описание проекта
 Это проект приложения, написанный на Dart с использованием Flutter. На экране присутствуют следующие элементы:
