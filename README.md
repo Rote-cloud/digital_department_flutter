@@ -1,16 +1,48 @@
 # flutter_project
 
-A new Flutter project.
+![Flutter Photo](photo/photo1.png)
 
-## Getting Started
+![Flutter Photo](photo/photo2.png)
 
-This project is a starting point for a Flutter application.
+## Описание проекта
+Это проект приложения, написанный на Dart с использованием Flutter. На экране присутствуют следующие элементы:
 
-A few resources to get you started if this is your first Flutter project:
+- **Кнопки выхода**: Кнопки для выхода из приложения.
+- **Аватар**: Аватар пользователя.
+- **Имя**: Имя пользователя.
+- **Кнопки навигации**: Кнопки для навигации по приложению.
+- **Заголовок для карточек**: Заголовок для карточек приложения.
+- **Карточки**: Карточки приложения.
+- **Заголовок операций**: Заголовок для кнопок операций.
+- **Кнопки операций**: Кнопки операций сбера.
+- **Заголовок интересов**: Заголовок для кнопок интересов.
+- **Кнопки интересов**: Кнопки интересов пользователя.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Структура проекта
+- **`main`**: Главный файл для компиляции всего приложения.
+- **`Develop`**: Файл с вызовом тела приложения.
+- **`appBar`**: Папка с реализацией шапки приложения.
+- **`card`**:  Папка в которой написана реализация карточек.
+- **`Chips`**: Кнопки интересов пользователя.
+- **`Information`**: Информация о тарифах.
+- **`TariffsAndLimits`**: Карточки с тарифами.
+- **`TextConnection`**: Заголовки приложения.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Технологии
+- Flutter, Dart
+
+## Как использовать
+1. Клонируйте репозиторий.
+2. Откройте проект в вашей IDE. Желательно в AndroidStudio.
+3. Запустите проект и убедитесь, что у вас установлены все необходимые зависимости.
+
+На момент написания
+Версия flutter: 3.16.0
+Версия Dart: 3.2.0
+Версия DevTools: 2.28.2
+Версия Android Studio Giraffe: 2022.3.1 Patch 2
+Работал в Android Studio
+Проверял на телефоне: Pixel 7 API 31
+
+## Автор
+Шереметьев Кирилл Алексеевич

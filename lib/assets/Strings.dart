@@ -25,6 +25,6 @@ class MyStrings {
   static const String textTariffsText2 = "Показать остаток в этом месяце";
   static const String textInfoImage = "images/arrows.png";
   static const String textInfoTitle = "Информация о тарифах и лимитах";
-  static const String imageAvatar = "images/photo.png";
+  static const String imageAvatar = "images/photo2.png";
   static const String textNameTop = 'Екатерина';
 }
